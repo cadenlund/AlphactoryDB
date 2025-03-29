@@ -14,6 +14,6 @@ dependencies:
   - tqdm           # optional, progress bars for batch ingest
   - python-dotenv
 # You can add pip packages if needed:
-# pip:
-#   - some_pip_only_package
+ pip:
+  - polygon-api-client
 
