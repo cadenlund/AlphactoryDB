@@ -1,0 +1,19 @@
+name: alphactorydb
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - requests
+  - psycopg2
+  - python-dotenv
+  - ipykernel      # for Jupyter kernel integration (optional)
+  - jupyterlab     # optional, for dev/testing
+  - pandas         # optional, for working with tabular data
+  - tqdm           # optional, progress bars for batch ingest
+  - python-dotenv
+# You can add pip packages if needed:
+# pip:
+#   - some_pip_only_package
+
