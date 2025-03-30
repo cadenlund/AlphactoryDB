@@ -1,25 +1,27 @@
--- Create hypertable for OHLCV
-CREATE TABLE ohlcv_data (
-    time        TIMESTAMPTZ       NOT NULL,
-    symbol      TEXT              NOT NULL,
-    open        DOUBLE PRECISION  NOT NULL,
-    high        DOUBLE PRECISION  NOT NULL,
-    low         DOUBLE PRECISION  NOT NULL,
-    close       DOUBLE PRECISION  NOT NULL,
-    volume      DOUBLE PRECISION  NOT NULL,
-    PRIMARY KEY (time, symbol)
-);
-SELECT create_hypertable('ohlcv_data', 'time');
-
--- Create standard table for stock metadata
 CREATE TABLE stock_metadata (
     ticker TEXT PRIMARY KEY,
-    name TEXT,
-    market_cap BIGINT,
-    primary_exchange TEXT,
+    active BOOLEAN,
     type TEXT,
+    market_cap NUMERIC,
+    primary_exchange TEXT,
+    sic_description TEXT,
+    list_date DATE,
+    name TEXT,
+    description TEXT,
+    total_employees INTEGER,
     share_class_shares_outstanding BIGINT,
-    weighted_shares_outstanding BIGINT,
-    active BOOLEAN
+    weighted_shares_outstanding BIGINT
 );
+
+CREATE TABLE ohlcv_data (
+    time TIMESTAMPTZ NOT NULL,
+    ticker TEXT REFERENCES stock_metadata(ticker),
+    open NUMERIC,
+    high NUMERIC,
+    low NUMERIC,
+    close NUMERIC,
+    volume BIGINT,
+    PRIMARY KEY (time, ticker)
+);
+SELECT create_hypertable('ohlcv_data', 'time');
 

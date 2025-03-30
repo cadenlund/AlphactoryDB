@@ -14,7 +14,7 @@ def fetch_daily_bars(ticker: str, start: str, end: str):
     for bar in client.list_aggs(
         ticker=ticker,
         multiplier=1,
-        timespan="day",
+        timespan="hour",
         from_=start,
         to=end,
         limit=5000

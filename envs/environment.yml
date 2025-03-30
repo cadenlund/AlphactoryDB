@@ -13,6 +13,7 @@ dependencies:
   - pandas         # optional, for working with tabular data
   - tqdm           # optional, progress bars for batch ingest
   - python-dotenv
+  - sqlalchemy
 # You can add pip packages if needed:
  pip:
   - polygon-api-client
