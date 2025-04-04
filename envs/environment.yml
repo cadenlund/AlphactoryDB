@@ -14,6 +14,7 @@ dependencies:
   - tqdm           # optional, progress bars for batch ingest
   - python-dotenv
   - sqlalchemy
+  - boto3
 # You can add pip packages if needed:
  pip:
   - polygon-api-client
