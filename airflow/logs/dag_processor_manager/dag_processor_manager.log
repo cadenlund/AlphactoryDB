@@ -2331,3 +2331,10 @@ File Path                                                                       
 [2025-04-06T10:51:45.702+0000] {manager.py:824} INFO - There are 0 files in /opt/airflow/dags
 [2025-04-06T10:56:46.390+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
 [2025-04-06T10:56:46.390+0000] {manager.py:824} INFO - There are 0 files in /opt/airflow/dags
+[2025-04-06T11:01:47.374+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-04-06T11:01:47.377+0000] {manager.py:824} INFO - There are 0 files in /opt/airflow/dags
+[2025-04-07T00:42:16.772+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-04-07T00:42:16.773+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-04-07T00:42:16.773+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-04-07T00:42:16.773+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-04-07T00:42:16.774+0000] {manager.py:824} INFO - There are 0 files in /opt/airflow/dags
